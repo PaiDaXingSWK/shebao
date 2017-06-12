@@ -1,18 +1,24 @@
 <template>
   <div id="app">
+    <v-header ></v-header>
+    <v-nav></v-nav>
+    <div class="content">
+      <router-view></router-view>
+    </div>
 
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
-//  import header from './components/header/header.vue'
+   import header from './components/header.vue'
+   import nav from './components/nav.vue'
   export default {
     name: 'app',
 
 
     components: {
-     /* 'v-header': header*/
+       'v-header': header,
+       'v-nav': nav
     },
     watch:{
       '$route': function () {
@@ -23,7 +29,7 @@
 </script>
 
 <style>
-#app {
-
+.content {
+  padding: 20px ;
 }
 </style>

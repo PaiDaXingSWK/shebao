@@ -7,6 +7,10 @@ import  Axios from 'axios'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import acquisition from './components/acquisition/acquisition.vue'
+import identify from './components/identify/identify.vue'
+import check from './components/check/check.vue'
+import analyse from './components/analyse/analyse.vue'
+import manage from './components/manage/manage.vue'
 Vue.use(VueRouter)
 Vue.use(iView);
 Vue.config.productionTip = false
@@ -20,16 +24,17 @@ const routes = [
     component: App,
     children: [
       {path: '/acquisition',component: acquisition
-       /* ,
-      children:[{path:'/',component:stepF}]*/
-    }
+    },
+      {path:'/identify',component:identify},
+      {path:'/check',component:check},
+      {path:'/analyse',component:analyse},
+      {path:'/manage',component:manage}
      /* {
       path: '/ratings', component: ratings,
       children:[{path: 'sec', component: sec}, {
         path: 'sec2', component: sec2
       }]
-    },
-      {path:'/sec',component:sec}*/
+    }*/
     ]
   }
 ]

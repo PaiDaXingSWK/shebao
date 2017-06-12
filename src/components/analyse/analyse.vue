@@ -1,19 +1,17 @@
 <template>
     <div>
-      <v-peopleList></v-peopleList>
 
+        <div>this is analyseanalyseanalyseanalyseanalyseanalyse body</div>
 
     </div>
 </template>
 <script type="text/ecmascript-6">
-import peopleList from '../peopleList.vue'
+
     export default{
         data(){
             return {}
         },
-        components: {
-            'v-peopleList':peopleList
-        }
+        components: {}
     }
 </script>
 <style>
