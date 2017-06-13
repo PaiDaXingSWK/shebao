@@ -1,20 +1,20 @@
 <template>
-    <div>
+    <div  >
 
-      <v-peopleList></v-peopleList>
+        <router-view></router-view>
 
     </div>
 </template>
 <script type="text/ecmascript-6">
-  import peopleList from '../peopleList.vue'
+
     export default{
         data(){
             return {}
         },
-        components: { 'v-peopleList':peopleList}
+        components: {}
     }
 </script>
-<style scoped>
+<style>
     body {
     }
 </style>

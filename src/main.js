@@ -11,6 +11,8 @@ import identify from './components/identify/identify.vue'
 import check from './components/check/check.vue'
 import analyse from './components/analyse/analyse.vue'
 import manage from './components/manage/manage.vue'
+import login from './components/login.vue'
+
 Vue.use(VueRouter)
 Vue.use(iView);
 Vue.config.productionTip = false
@@ -19,10 +21,22 @@ Vue.prototype.$http = Axios
 
 const routes = [
   {
-    path: '/',
-    name: 'index',
+    path:'/',
+    component:App,
+    children: [
+      {
+        path: '/',
+        component: login
+      }
+    ]
+  },
+  {
+    path: '/App',
+    name: 'App',
     component: App,
     children: [
+      {path: '/login',component: login
+      },
       {path: '/acquisition',component: acquisition
     },
       {path:'/identify',component:identify},
@@ -48,4 +62,4 @@ let router = new VueRouter({
 new Vue({
   router
 }).$mount('#app')
-router.push('/acquisition')
+router.push('/login')

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-header ></v-header>
-    <v-nav></v-nav>
+    <v-header v-show="Token"></v-header>
+    <v-nav v-show="Token"></v-nav>
     <div class="content">
       <router-view></router-view>
     </div>
@@ -14,7 +14,7 @@
    import nav from './components/nav.vue'
   export default {
     name: 'app',
-
+    Token:'',
 
     components: {
        'v-header': header,
@@ -22,7 +22,7 @@
     },
     watch:{
       '$route': function () {
-        console.log('+++')
+          this.Token=localStorage.getItem('token')
       }
     }
   }
@@ -30,11 +30,6 @@
 
 <style>
 .content {
-  padding: 20px ;
- /* position: absolute;
-  top: 120px;
-  background: #1c2438;
-  bottom: 0;
-  left: 0px;*/
+
 }
 </style>

@@ -22,7 +22,16 @@
       系统管理</router-link>
     </Menu-item>
 
+    <Dropdown style="margin-left: 20px"   >
+      <a href="javascript:void(0)" class="logout-button">
+        下拉菜单
+      </a>
 
+      <Dropdown-menu slot="list">
+        <Dropdown-item  @click='lala'>退出</Dropdown-item>
+
+      </Dropdown-menu>
+    </Dropdown>
   </Menu>
   </div>
 </template>
@@ -32,12 +41,18 @@
         data(){
             return {}
         },
+      methods:{
+            lala(){
+                alert('++++++')
+            }
+      },
         components: {}
     }
 </script>
 <style scoped>
   .ivu-menu{
     display: flex;
+    box-shadow: 0 2px 4px 0 rgba(70, 76, 91, .52), 0 0 6px 0 rgba(70, 76, 91,.04)
   }
     .ivu-menu-item{
       flex: 1;
@@ -48,9 +63,12 @@
 
   }
   a:hover{
-    color: #fff;
+    color: #fff !important;
   }
   .ivu-menu-item-selected a{
     color: #fff !important;
+  }
+  .ivu-menu-light {
+    background: #00d1b2;
   }
 </style>
