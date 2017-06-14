@@ -11,7 +11,7 @@ export default new Router({
       children: [
         {
           path: '/',
-          component: resolve => require(['../components/login.vue'], resolve)
+          redirect: '/login'
         }
       ]
     },

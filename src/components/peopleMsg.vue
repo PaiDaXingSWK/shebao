@@ -1,15 +1,79 @@
 <template>
-    <div>
+    <div  >
       <i-form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="80">
+        <Row>
+        <i-col span="12">
         <Form-item label="密码" prop="passwd">
           <Input type="password" v-model="formCustom.passwd"></Input>
         </Form-item>
+        </i-col>
+          <i-col span="12">
+        <Form-item label="密码" prop="passwd">
+          <Input type="password" v-model="formCustom.passwd"></Input>
+        </Form-item>
+        </i-col>
+        </Row>
+        <Row>
+        <i-col span="12">
         <Form-item label="确认密码" prop="passwdCheck">
           <Input type="password" v-model="formCustom.passwdCheck"></Input>
         </Form-item>
+        </i-col>
+          <i-col span="12">
+        <Form-item label="确认密码" prop="passwdCheck">
+          <Input type="password" v-model="formCustom.passwdCheck"></Input>
+        </Form-item>
+        </i-col>
+        </Row>
+        <Row>
+          <i-col span="12">
         <Form-item label="年龄" prop="age">
           <Input type="text" v-model="formCustom.age" number></Input>
         </Form-item>
+          </i-col>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+        </Row>
+        <Row>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+        </Row>
+        <Row>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+        </Row> 12<Row>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+          <i-col span="12">
+        <Form-item label="年龄" prop="age">
+          <Input type="text" v-model="formCustom.age" number></Input>
+        </Form-item>
+          </i-col>
+        </Row>
+
+
         <Form-item>
           <Button type="primary" @click="handleSubmit('formCustom')">提交</Button>
           <Button type="ghost" @click="handleReset('formCustom')" style="margin-left: 8px">重置</Button>

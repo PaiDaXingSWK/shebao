@@ -27,10 +27,10 @@
     },
     mounted() {
       // 屏幕适应
-      let $window = $(window).width();
+     /* let $window = $(window).width();
       $window *= 100 / 1918;
       $('html').css('fontSize', $window);
-     console.log($window)
+     console.log($window)*/
     }
   }
 </script>

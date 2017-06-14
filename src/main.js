@@ -46,10 +46,11 @@ Axios.interceptors.response.use(function (response) {
 //最原始的router配置已经存入桌面
 
 /*
-let router = new VueRouter({
+let Router = new VueRouter({
   linkActiveClass: 'active',
   routes
 })*/
+
 
 new Vue({
   router, render: h => h(App)

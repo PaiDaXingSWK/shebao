@@ -1,6 +1,6 @@
 <template>
   <div style="height: 60px">
-  <Menu mode="horizontal" theme="dark" active-name="1">
+  <Menu mode="horizontal" theme="dark" active-name="1" :default-active="onRoutes">
     <Menu-item name="1">
       <Icon type="ios-paper"></Icon><router-link to="/acquisition">
       信息采集</router-link>
@@ -17,8 +17,8 @@
       <Icon type="ios-people"></Icon><router-link to="/analyse">
       报表分析 </router-link>
     </Menu-item>
-    <Menu-item name="5">
-      <Icon type="ios-people"></Icon><router-link to="/manage">
+    <Menu-item name="5" >
+      <Icon type="ios-people"></Icon><router-link to="/analyse">
       系统管理</router-link>
     </Menu-item>
 
@@ -66,7 +66,12 @@
           this.$router.push({ path: '/login' })
         }
       },
-        components: {}
+        components: {},
+      computed:{
+        onRoutes(){
+          return this.$route.path.replace('/','');
+        }
+      }
     }
 </script>
 <style scoped>
@@ -82,12 +87,16 @@
     font-size: 20px;
 
   }
+  .ivu-menu-item a{
+    color: #fff;
+  }
+  .ivu-menu-item-selected a{
+    font-size: 20px;
+  }
   a:hover{
     color: #fff !important;
   }
-  .ivu-menu-item-selected a{
-    color: #fff !important;
-  }
+
   .ivu-menu-light {
     background: #00d1b2;
   }
