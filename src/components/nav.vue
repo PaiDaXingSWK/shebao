@@ -18,7 +18,7 @@
       报表分析 </router-link>
     </Menu-item>
     <Menu-item name="5" >
-      <Icon type="ios-people"></Icon><router-link to="/analyse">
+      <Icon type="ios-people"></Icon><router-link to="/manage">
       系统管理</router-link>
     </Menu-item>
 
