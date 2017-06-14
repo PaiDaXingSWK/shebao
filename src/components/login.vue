@@ -55,7 +55,7 @@
             if (valid) {
               this.$Message.success('提交成功!');
               this.$router.push({ path: '/acquisition' })
-              localStorage.setItem('token','www')
+              localStorage.setItem('id_token', '666888999111000222333')
             } else {
               this.$Message.error('表单验证失败!');
             }
@@ -97,5 +97,8 @@
 
   .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab-active {
     border-color: #fff;
+  }
+  .demo-tabs-style1{
+  box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2), 0 18px 20px -10px rgba(0, 0, 0, 0.4), 0 18px 20px -10px rgba(0, 0, 0, 0.4), 0 10px 20px -10px rgba(0, 0, 0, 0.4);
   }
 </style>

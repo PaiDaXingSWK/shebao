@@ -133,7 +133,18 @@
           this.$Modal.info({
             title: '用户信息',
             content: `姓名：${this.data6[index].name}<br>年龄：${this.data6[index].age}<br>地址：${this.data6[index].address}`
-          })
+          });
+
+            var _this = this;
+            _this.$http.get("./static/data.json")
+              .then(function (rsp) {
+                console.log(rsp.data.goods)
+                _this.names=rsp.data.goods
+              })
+              .catch(function (error) {
+                console.log(error);
+              })
+
         },
         remove (index) {
           this.data6.splice(index, 1);
