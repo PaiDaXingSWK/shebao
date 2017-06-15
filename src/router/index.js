@@ -19,11 +19,11 @@ export default new Router({
       path: '/readme',
       component: resolve => require(['../components/home.vue'], resolve),
       children: [
-        {path: '/acquisition', component: resolve => require(['../components/acquisition/acquisition.vue'], resolve)},
-        {path: '/identify', component: resolve => require(['../components/identify/identify.vue'], resolve)},
-        {path: '/check', component: resolve => require(['../components/check/check.vue'], resolve)},
-        {path: '/analyse', component: resolve => require(['../components/analyse/analyse.vue'], resolve)},
-        {path: '/manage', component: resolve => require(['../components/manage/manage.vue'], resolve)}
+        {path: '/acquisition', meta: {requireAuth: true}, component: resolve => require(['../components/acquisition/acquisition.vue'], resolve)},
+        {path: '/identify',meta: {requireAuth: true}, component: resolve => require(['../components/identify/identify.vue'], resolve)},
+        {path: '/check',meta: {requireAuth: true}, component: resolve => require(['../components/check/check.vue'], resolve)},
+        {path: '/analyse',meta: {requireAuth: true}, component: resolve => require(['../components/analyse/analyse.vue'], resolve)},
+        {path: '/manage',meta: {requireAuth: true}, component: resolve => require(['../components/manage/manage.vue'], resolve)}
       ]
     },
     {

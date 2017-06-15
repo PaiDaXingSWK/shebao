@@ -97,7 +97,8 @@
                       },
                       on: {
                         click: () => {
-                          this.remove(params.index)
+                          this.remove(params.index);
+                          localStorage.clear()
                         }
                       }
                     }, '删除')
