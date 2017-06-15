@@ -115,7 +115,7 @@
         },
         getpage () {
           var _this = this;
-          _this.$http.get("./static/data.json")
+          _this.$http.get("exam/persons")
             .then(function (rsp) {
               console.log(rsp.data.goods)
               _this.data6=rsp.data.goods

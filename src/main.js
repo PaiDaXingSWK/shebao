@@ -18,9 +18,11 @@ import login from './components/login.vue'*/
 Vue.use(iView);
 Vue.config.productionTip = false
 Vue.prototype.$http = Axios
+Axios.defaults.baseURL = 'http://192.168.31.99:8040'
 if(localStorage.getItem('id_token')){
   console.log(localStorage.getItem('id_token'))
-  Axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
+  // Axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
+  Axios.defaults.headers.common['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJhZG1pbiIsImF0dGVuZGFuY2UiOiJhZG1pbiIsImNvcmUiOiJhZG1pbiIsImVudGVycHJpc2UiOiJhZG1pbiIsImV4YW0iOiJhZG1pbiIsImV4cCI6MTQ5Nzc2NDYzMSwiaWQiOiI5YTJmNzg3Yi0zYjZlLTExZTctODczYi0wMjQyYWMxMjAwMGEiLCJvcmlnX2lhdCI6MTQ5NzUwNTQzMSwicGF5bWVudCI6ImFkbWluIiwicmVtb3Rlc2l0ZSI6ImFkbWluIiwidmlzaXRvciI6ImFkbWluIn0.1idoqmCG2UpG-Q_eoQqbQmKl3FlAKWG8WRx4P2MgAMY'
 }
 
 // 全局的请求拦截器
