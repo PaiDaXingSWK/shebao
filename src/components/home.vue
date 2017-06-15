@@ -1,6 +1,6 @@
 <template>
-    <div  >
-      <v-header></v-header>
+    <div  style="width: 100%">
+      <!--<v-header></v-header>-->
       <v-nav></v-nav>
       <div class="content">
         <router-view></router-view>
@@ -19,6 +19,6 @@
     }
 </script>
 <style>
-    body {
-    }
+   .content{
+   }
 </style>

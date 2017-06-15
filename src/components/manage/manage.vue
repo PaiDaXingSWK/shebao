@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="list-content">
+      <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
 
       <i-menu theme="dark" active-name="1">
 
@@ -135,13 +135,13 @@
 <style scoped>
   .list-content{
     position: absolute;
-    top:120px;
+    top:70px;
     left: 0;
     bottom:0;
     background: #1c2438;
   }
   .table-wrapper{
-    width: 80%;
+
     margin-left: 280px;
     margin-top: 20px;
      box-shadow: 0 2px 6px  rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);

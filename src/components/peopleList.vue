@@ -56,14 +56,15 @@ import peopleMsg from './peopleMsg.vue'
     color: #fff;
   }
     .people-list {
-      width: 300px;
+      width: 240px;
       position: absolute;
-      top:120px;
+      top:70px;
       bottom:0;
       left:0;
        background: #1c2438;
-      box-shadow: 1px 0 20px 0 rgba(70, 76, 91, .54);
+      box-shadow:2px 10px 18px #333333;
       padding: 20px;
+      margin-bottom: 10px;
     }
 
 </style>

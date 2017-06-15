@@ -2,7 +2,7 @@
     <div class="content">
 
       <Row :gutter="32">
-        <i-col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
+        <i-col span="24" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
         <Tabs type="card">
           <Tab-pane label="用户名密码登录">
 

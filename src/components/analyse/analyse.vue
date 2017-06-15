@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <div class="list-content">
+    <div style="width: 100%;padding:0 20px;border-radius:5px;margin-right: 20px;min-height:600px;margin-bottom:10px;box-shadow: 1px 0 20px 0 rgba(70, 76, 91, .54);margin-top:10px;margin-left: 260px">
+      <div class="list-content" style="box-shadow: 2px 10px 18px #333333;">
 
 
       <i-menu theme="dark" active-name="1">
@@ -22,7 +22,7 @@
 
       </i-menu>
       </div>
-
+      <div>
       <div class="search-body" style=" ">
         <Row  >
 
@@ -34,9 +34,10 @@
 
         </Row>
       </div>
-      <div style="margin-left: 330px">
-        <i-col span="18">
+      <div >
+        <i-col span="24">
         <Table border :columns="columns7" :data="data6"></Table></i-col>
+      </div>
       </div>
     </div>
 </template>
@@ -156,18 +157,19 @@
 <style scoped>
    .list-content{
      position: absolute;
-     top:120px;
+     top:70px;
      left: 0;
      bottom:0;
      background: #1c2438;
+    margin-bottom: 10px;
    }
    .search-body{
      display: flex;
      text-align: center;
      overflow: hidden;
      flex-direction: column;
-     width: 82.5%;
-     margin-left: 332px;
+
+
      margin-top: 28px;
      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);
      padding: 20px;

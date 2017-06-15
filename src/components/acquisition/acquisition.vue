@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="width: 100%">
       <v-peopleList></v-peopleList>
       <div class="content">
         <Row>
@@ -277,12 +277,17 @@ import peopleMsg from '../peopleMsg.vue'
     text-align: center;
     overflow: hidden;
     flex-direction: column;
-    width: 82.5%;
-    margin-left: 332px;
-    margin-top: 28px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);
-    padding: 20px;
+    width: 85.5%;
+    margin-left: 260px;
 
+    box-shadow: rgba(70, 76, 91, 0.54) 1px 0px 20px 0px;
+    padding: 20px;
+    min-height: 600px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    top: 90px;
+    border-radius: 5px;
   }
   .oparity{
 
