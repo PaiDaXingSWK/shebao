@@ -54,9 +54,9 @@
           this.$refs[name].validate((valid) => {
             if (valid) {
               this.$Message.success('提交成功!');
-
               localStorage.setItem('id_token', '666888999111000222333')
-              this.$router.push({ path: '/acquisition' })
+              let arr=['manage','acquisition']
+              this.$router.push({ path: arr[1] })
             } else {
               this.$Message.error('表单验证失败!');
             }
