@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content" @keyup.enter.native="handleSubmit('formInline')">
 
       <Row :gutter="32">
         <i-col span="24" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
@@ -8,21 +8,29 @@
 
             <i-form ref="formInline" :model="formInline" :rules="ruleInline"  >
               <Form-item prop="user">
-                <i-input type="text" v-model="formInline.user" placeholder="Username">
+                <i-input type="text" v-model="formInline.user" placeholder="Username" autofocus>
                 <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>
               <Form-item prop="password">
-                <i-input type="password" v-model="formInline.password" placeholder="Password">
+                <i-input type="password"  v-model="formInline.password" placeholder="Password">
                 <Icon type="ios-locked-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>
               <Form-item>
-                <Button type="primary" @click="handleSubmit('formInline')"> 登录 </Button>
+                <Button type="primary" @click.native="handleSubmit('formInline')" > 登1录 </Button>
               </Form-item>
             </i-form>
           </Tab-pane>
-          <Tab-pane label="指静脉登录">How</Tab-pane>
+          <Tab-pane label="指静脉登录">
+            <div style="margin-top: 50px">
+            <Button type="primary" @click="login" > 登录 </Button>
+              <br>
+              <span style="color: red">*点击登录按钮 </span>
+              <br>
+              <span style="color: red">开始登录操作 </span>
+            </div>
+          </Tab-pane>
 
         </Tabs>
         </i-col>
@@ -61,6 +69,9 @@
               this.$Message.error('表单验证失败!');
             }
           })
+        },
+        login(){
+            console.log('???????')
         }
       },
         components: {}

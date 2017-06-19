@@ -49,7 +49,7 @@
           @on-ok="ok"
           @on-cancel="cancel">
           <div>
-            <Steps :current="stepCount">
+            <Steps :current="1">
               <Step title="采集准备" content="请选择要采集的手指和用于采集设备"></Step>
               <Step title="采集中" content="进行三次指静脉采集"></Step>
               <Step title="采集完成" content="采集完成"></Step>
