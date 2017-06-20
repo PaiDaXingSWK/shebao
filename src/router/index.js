@@ -21,7 +21,7 @@ export default new Router({
       children: [
         {path: '/acquisition', meta: {requireAuth: true}, component: resolve => require(['../components/acquisition/acquisition.vue'], resolve)},
         {path: '/identify',meta: {requireAuth: true}, component: resolve => require(['../components/identify/identify.vue'], resolve)},
-        {path: '/check',meta: {requireAuth: true}, component: resolve => require(['../components/check/check.vue'], resolve)},
+        {path: '/pickUp',meta: {requireAuth: true}, component: resolve => require(['../components/pickUp/pickUp.vue'], resolve)},
         {path: '/analyse',meta: {requireAuth: true}, component: resolve => require(['../components/analyse/analyse.vue'], resolve)},
         {path: '/manage',meta: {requireAuth: true}, component: resolve => require(['../components/manage/manage.vue'], resolve)}
       ]

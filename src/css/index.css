@@ -88,6 +88,9 @@ menu {
 fieldset,
 img {
   border: 0;
+
+}
+fieldset{
   vertical-align: middle;
 }
 article,

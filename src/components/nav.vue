@@ -8,17 +8,18 @@
     </div>
     <div style="margin: 0 auto ;width: 70%">
   <Menu mode="horizontal" class="navMainWrapper" theme="dark" :active-name="setActive"  :default-active="onRoutes" @on-select="routeTo">
-    <Menu-item name="acquisition">
-      <Icon type="ios-paper"></Icon>
-      信息采集
-    </Menu-item>
+
    <!-- <Menu-item name="identify">
       <Icon type="ios-people"></Icon>
       人员认证
     </Menu-item>-->
-   <Menu-item name="check">
+   <Menu-item name="pickUp">
       <Icon type="ios-people"></Icon>
-     人员查看
+     采集信息
+    </Menu-item>
+    <Menu-item name="acquisition">
+      <Icon type="ios-paper"></Icon>
+      人员信息
     </Menu-item>
     <Menu-item name="analyse">
       <Icon type="ios-people"></Icon>

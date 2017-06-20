@@ -97,7 +97,7 @@
   #video{
     position: relative;
   }
-  img,canvas{
+  #img,canvas{
     position: absolute;
     top: 114px;
     left: 26px;
