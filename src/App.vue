@@ -36,6 +36,7 @@
 </script>
 
 <style>
+  @import './css/index.css';
   #app{
     overflow: hidden;
   }

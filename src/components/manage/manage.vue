@@ -6,14 +6,14 @@
 
         <Menu-item name="1">
           <Icon type="document-text"></Icon>
-          人员管理
+          系统用户
         </Menu-item>
         <Menu-item name="2">
           <Icon type="chatbubbles"></Icon>
-          数据同步
+          管理设置
         </Menu-item>
 
-        <Menu-item name="3">
+       <!-- <Menu-item name="3">
           <Icon type="heart"></Icon>
           系统恢复
         </Menu-item>
@@ -24,7 +24,7 @@
         <Menu-item name="5">
           <Icon type="heart-broken"></Icon>
           参数配置
-        </Menu-item>
+        </Menu-item>-->
 
       </i-menu>
       </div>
@@ -139,12 +139,22 @@
     left: 0;
     bottom:0;
     background: #1c2438;
+    margin-bottom: 10px;
   }
   .table-wrapper{
-
+    position: absolute;
+    bottom: 0;
+    top: 66px;
+    left: -25px;
+    min-height: 600px;
+    right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #fff;
     margin-left: 280px;
     margin-top: 20px;
-     box-shadow: 0 2px 6px  rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);
+     /*box-shadow: 0 2px 6px  rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);*/
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);
     padding: 10px;
 
   }

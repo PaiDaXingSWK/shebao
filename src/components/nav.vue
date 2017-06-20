@@ -12,10 +12,10 @@
       <Icon type="ios-paper"></Icon>
       信息采集
     </Menu-item>
-    <Menu-item name="identify">
+   <!-- <Menu-item name="identify">
       <Icon type="ios-people"></Icon>
       人员认证
-    </Menu-item>
+    </Menu-item>-->
    <Menu-item name="check">
       <Icon type="ios-people"></Icon>
      人员查看
