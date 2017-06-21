@@ -1,10 +1,10 @@
 <template>
     <div class="content" @keyup.enter.native="handleSubmit('formInline')">
 
-      <Row :gutter="32">
-        <i-col span="24" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
+        <div style="width: 50%">
+          <i-col span="24" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
         <Tabs type="card">
-          <Tab-pane label="用户名密码登录">
+          <Tab-pane label="用户登录">
 
             <i-form ref="formInline" :model="formInline" :rules="ruleInline"  >
               <Form-item prop="user">
@@ -18,11 +18,11 @@
                 </i-input>
               </Form-item>
               <Form-item>
-                <Button type="primary" @click.native="handleSubmit('formInline')" > 登1录 </Button>
+                <Button type="primary" @click.native="handleSubmit('formInline')" > 登录 </Button>
               </Form-item>
             </i-form>
           </Tab-pane>
-          <Tab-pane label="指静脉登录">
+        <!--  <Tab-pane label="指静脉登录">
             <div style="margin-top: 50px">
             <Button type="primary" @click="login" > 登录 </Button>
               <br>
@@ -30,12 +30,13 @@
               <br>
               <span style="color: red">开始登录操作 </span>
             </div>
-          </Tab-pane>
+          </Tab-pane>-->
 
         </Tabs>
         </i-col>
+        </div>
 
-      </Row>
+
 
     </div>
 </template>
@@ -96,11 +97,13 @@
   .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-content {
     height: 120px;
     margin-top: -16px;
+
   }
 
   .demo-tabs-style1 > .ivu-tabs-card > .ivu-tabs-content > .ivu-tabs-tabpane {
     background: #fff;
     padding: 16px;
+
   }
 
   .demo-tabs-style1 > .ivu-tabs.ivu-tabs-card > .ivu-tabs-bar .ivu-tabs-tab {

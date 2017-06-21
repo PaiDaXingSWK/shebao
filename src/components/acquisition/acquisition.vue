@@ -4,7 +4,7 @@
     <div class="content">
       <Row>
         <div class="content-header">
-          所有人员
+          人员信息
           <span>
       <Button type="info" icon='plus' @click='showIncrease = true' size="small"></Button>
         </span>
@@ -281,19 +281,6 @@
                     }
                   }
                 }, '认证'), h('Button', {
-                  props: {
-                    type: 'error',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.remove(params.index)
-                    }
-                  }
-                }, '信息采集'), h('Button', {
                   props: {
                     type: 'warning',
                     size: 'small'
