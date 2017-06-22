@@ -1,6 +1,7 @@
 <template>
     <div>
-      <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
+      <v-nav :side-menus='menus'></v-nav>
+    <!--  <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
 
       <i-menu theme="dark"   :active-name="setActive"  :default-active="onRoutes" @on-select="routeTo">
 
@@ -17,21 +18,8 @@
           设备
         </Menu-item>
 
-       <!-- <Menu-item name="3">
-          <Icon type="heart"></Icon>
-          系统恢复
-        </Menu-item>
-        <Menu-item name="4">
-          <Icon type="heart-broken"></Icon>
-          系统备份
-        </Menu-item>
-        <Menu-item name="5">
-          <Icon type="heart-broken"></Icon>
-          参数配置
-        </Menu-item>-->
-
       </i-menu>
-      </div>
+      </div>-->
       <div class="table-wrapper">
         <router-view></router-view>
       <!--  <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">数据恢复</i-button>
@@ -43,10 +31,20 @@
     </div>
 </template>
 <script type="text/ecmascript-6">
-
+import navC from '../navChild.vue'
     export default{
         data(){
-            return { columns7: [
+            return {
+              menus: [
+                {
+                  link: 'users',
+                  value: '系统影虎',
+                }, {
+                  link: 'personMenu',
+                  value: '人员',
+                }
+              ],
+                columns7: [
               {
                 title: '姓名',
                 key: 'name',
@@ -108,14 +106,14 @@
               data6: []
             }
         },
-      computed:{
+     /* computed:{
         onRoutes(){
           return this.$route.path.replace('/','');
         },
         setActive() {
           return this.$route.path.replace('/','');
         }
-      },
+      },*/
       methods: {
         routeTo(e) {
           //console.log(e);
@@ -143,7 +141,9 @@
             })
         }
       },
-        components: {},
+        components: {
+          'v-nav':navC
+        },
       created(){
         this.getpage();
       }

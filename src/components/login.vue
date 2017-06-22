@@ -64,8 +64,8 @@
             if (valid) {
               this.$Message.success('提交成功!');
               localStorage.setItem('id_token', '666888999111000222333')
-              let arr=['manage','acquisition']
-              this.$router.push({ path: arr[1] })
+              let arr=['pickUp','acquisition','module']
+              this.$router.push({ path: arr[2] })
             } else {
               this.$Message.error('表单验证失败!');
             }

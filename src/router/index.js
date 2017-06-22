@@ -20,6 +20,7 @@ export default new Router({
       component: resolve => require(['../components/home.vue'], resolve),
       children: [
         {path: '/acquisition', meta: {requireAuth: true}, component: resolve => require(['../components/acquisition/acquisition.vue'], resolve)},
+        {path: '/module', meta: {requireAuth: true}, component: resolve => require(['../components/module.vue'], resolve)},
         {path: '/pickUp',meta: {requireAuth: true}, component: resolve => require(['../components/pickUp/pickUp.vue'], resolve)},
         {path: '/analyse',meta: {requireAuth: true}, component: resolve => require(['../components/analyse/analyse.vue'], resolve),
           children: [
