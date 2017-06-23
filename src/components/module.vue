@@ -54,7 +54,7 @@
     components: {}
   }
 </script>
-<style>
+<style scoped>
   .ico{
     font-size: 140px;
     position: absolute;

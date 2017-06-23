@@ -15,6 +15,7 @@
     "iview": "^2.0.0-rc.16",
     "jQuery": "^1.7.4",
     "vue": "^2.3.3",
+    "vue-cascading-address": "^0.1.7",
     "vue-fullcalendar": "^1.0.9",
     "vue-router": "^2.3.1"
   },

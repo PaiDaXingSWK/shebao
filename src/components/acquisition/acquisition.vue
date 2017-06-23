@@ -1,7 +1,9 @@
 <template>
   <div style="width: 100%">
-    <v-peopleList></v-peopleList>
+   <!-- <v-peopleList></v-peopleList>-->
     <div class="content">
+
+
       <Row>
         <div class="content-header">
           人员信息
@@ -28,9 +30,9 @@
 
 
 
-        <div class="search-body" style="overflow: visible">
+         <div class="search-body" style="overflow: visible">
           <Row :gutter='32'>
-            <i-col span="4">
+            <i-col span="2">
               <i-select v-model="personMsg.personname"  filterable placeholder="姓名" clearable style="width: 100%">
                 <i-option> </i-option>
               </i-select>
@@ -40,21 +42,25 @@
                 <i-option     > </i-option>
               </i-select>
             </i-col>
-            <i-col span="4">
+            <i-col span="6">
+              <Cascader :data="data2" placeholder="请选择地区"></Cascader>
+            </i-col>
+
+            <i-col span="2">
               <i-select  :model.sync="personMsg.personsex"  filterable placeholder="性别" clearable style="width: 100%">
                 <i-option     > </i-option>
               </i-select>
             </i-col>
-            <i-col span="4">
+            <i-col span="3">
               <date-picker :model.sync="personMsg.time" type="datetime"   placeholder="时间" style="width: 100%"  ></date-picker>
             </i-col>
 
-            <i-col span="4" >
+            <i-col span="1" >
               <i-button type="info" @click="search" >搜索</i-button>
             </i-col>
           </Row>
         </div>
-        <Table border :columns="columns7" :data="data6"></Table>
+        <Table border :columns="columns7" :row-class-name="rowClassName"    :data="data6"></Table>
 
 
 
@@ -168,10 +174,44 @@
 <script type="text/ecmascript-6">
   import peopleList from '../peopleList.vue'
   import peopleMsg from '../peopleMsg.vue'
+
 //  import photo from '../photo.vue'
   export default{
     data(){
       return {
+        data2: [{
+          value: 'zhejiang',
+          label: '陕西',
+          children: [{
+            value: 'hangzhou',
+            label: '西安',
+            children: [{
+              value: 'xihu',
+              label: '高新',
+              children: [{
+                value: 'xihu',
+                label: '第一个街道办事处',
+                children: [{
+                  value: 'xihu',
+                  label: '第一个社区居委会'
+                }]
+              }]
+            }]
+          }]
+        }, {
+          value: 'jiangsu',
+          label: '江苏',
+          disabled: true,
+          children: [{
+            value: 'nanjing',
+            label: '南京',
+            children: [{
+              value: 'zhonghuamen',
+              label: '中华门'
+            }]
+          }]
+        }
+        ],
         personMsg: {
           personname: '',
           personid: '',
@@ -226,16 +266,56 @@
           },
           {
             title: '年龄',
-            key: 'age'
+            key: 'type'
           },
           {
             title: '地址',
             key: 'address'
           },
           {
-            title: '操作',
+            title: '指静脉操作',
             key: 'action',
-            width: 550,
+            width: 150,
+            align: 'center',
+            render: (h, params) => {
+              return h('div', [
+                h('Button', {
+                  props: {
+                    type: 'primary',
+                    size: 'small'
+                  },
+                  style: {
+                    marginRight: '5px'
+                  },
+                  on: {
+                    click: () => {
+                      this.show(params.index)
+                    }
+                  }
+                }, '采集'),
+                h('Button', {
+                  props: {
+                    type: 'error',
+                    size: 'small'
+                  },
+                  style: {
+                    marginRight: '5px'
+                  },
+                  on: {
+                    click: () => {
+                      this.remove(params.index)
+                    }
+                  }
+                }, '删除'),
+
+
+              ]);
+            }
+          },
+          {
+            title: '人员操作',
+            key: 'action',
+            width: 400,
             align: 'center',
             render: (h, params) => {
               return h('div', [
@@ -293,20 +373,7 @@
                       this.camera(params.index)
                     }
                   }
-                }, '照片采集'), h('Button', {
-                  props: {
-                    type: 'warning',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.aa(params.index)
-                    }
-                  }
-                }, '指静脉采集'),
+                }, '照片采集') ,
                 h('Button', {
                   props: {
                     type: 'info',
@@ -339,33 +406,32 @@
             }
           }
         ],
-        data6: [
-          {
-            name: '王小明',
-            age: 18,
-            address: '北京市朝阳区芍药居'
-          },
-          {
-            name: '张小刚',
-            age: 25,
-            address: '北京市海淀区西二旗'
-          },
-          {
-            name: '李小红',
-            age: 30,
-            address: '上海市浦东新区世纪大道'
-          },
-          {
-            name: '周小伟',
-            age: 26,
-            address: '深圳市南山区深南大道'
-          }
-        ]
+        data6: []
 
 
       }
     },
     methods: {
+      getpage () {
+        var _this = this;
+        _this.$http.get("./static/data.json")
+          .then(function (rsp) {
+            console.log(rsp.data.goods.type)
+            _this.data6=rsp.data.goods
+            _this.data6.address=rsp.data.goods[0].foods
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+      },
+      rowClassName (row, index) {
+        if (row.type===2 ) {
+          return 'demo-table-error-row';
+        } else if (row.type === -1) {
+          return 'aaa ';
+        }
+        return '';
+      },
       on(){
           /* 拍照 */
         let   vendorUrl = window.URL || window.webkitURL;
@@ -455,22 +521,34 @@
     },
     components: {
       'v-peopleList': peopleList,
-      'v-peopleMsg': peopleMsg
+      'v-peopleMsg': peopleMsg,
+
       /*,
       'v-photo': photo*/
+    },
+    created(){
+      this.getpage();
+this. rowClassName();
     }
   }
 </script>
 <style scoped>
+
+  .ivu-table .demo-table-error-row td{
+    background-color: red !important;
+    color: #fff;
+  }
   .content {
     display: flex;
     text-align: center;
     overflow: hidden;
     flex-direction: column;
-    width: 85.5%;
-    margin-left: 260px;
+    width: 98.5%;
+    /*width: 85.5%;*/
+    /*margin-left: 260px;*/
+    margin: 0 15px 0 15px;
     background: #fff;
-    /*box-shadow: rgba(70, 76, 91, 0.54) 1px 0px 20px 0px;*/
+
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.117647), 1px 0 1px rgba(0, 0, 0, 0.117647), -1px 0 1px rgba(0, 0, 0, 0.117647);
     padding: 20px;
     min-height: 600px;

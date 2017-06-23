@@ -1,5 +1,5 @@
 <template>
-    <div class="content" @keyup.enter.native="handleSubmit('formInline')">
+    <div class="content" >
 
         <div style="width: 50%">
           <i-col span="24" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
@@ -8,12 +8,12 @@
 
             <i-form ref="formInline" :model="formInline" :rules="ruleInline"  >
               <Form-item prop="user">
-                <i-input type="text" v-model="formInline.user" placeholder="Username" autofocus>
+                <i-input type="text" v-model="formInline.user" placeholder="Username" @keyup.enter.native="handleSubmit('formInline')" autofocus>
                 <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>
               <Form-item prop="password">
-                <i-input type="password"  v-model="formInline.password" placeholder="Password">
+                <i-input type="password"  v-model="formInline.password" @keyup.enter.native="handleSubmit('formInline')" placeholder="Password">
                 <Icon type="ios-locked-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>

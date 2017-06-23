@@ -6,7 +6,7 @@
       <Button type="info" icon='plus' @click='showIncrease = true' size="small"></Button>
         </span>
       </div>
-      <Table border :columns="columnsCore" :data="dataCore"></Table>
+      <Table border :columns="columnsCore" :row-class-name="rowClassName" :data="dataCore"></Table>
     </div>
 </template>
 <script type="text/ecmascript-6">
@@ -80,20 +80,47 @@
                 }
               ],
               dataCore: [
-                {
-                  name: '王小明',
-                  type: 18,
-                  ip : '000111',
-                  status:'正常',
-                  num: 'tt520'
-                }
+
               ]
             }
         },
-        components: {}
+        components: {},
+      methods:{
+        getpage () {
+          var _this = this;
+          _this.$http.get("./static/data.json")
+            .then(function (rsp) {
+              console.log(rsp.data.goods.type)
+              _this.dataCore=rsp.data.goods
+              _this.dataCore.name=rsp.data.goods[0].foods
+            })
+            .catch(function (error) {
+              console.log(error);
+            })
+        },
+        rowClassName (row, index) {
+          if (row.type === -1) {
+            return 'aa';
+          } else if (row.type === 2) {
+            return 'demo-table-error-row';
+
+          }
+          return '';
+        }
+      },
+      created(){
+        this.getpage();
+
+      }
     }
 </script>
 <style>
-    body {
-    }
+  .ivu-table .demo-table-info-row td{
+    background-color: #2db7f5;
+    color: #fff;
+  }
+  .ivu-table .demo-table-error-row td{
+    background-color: lightsalmon;
+    color: #fff;
+  }
 </style>

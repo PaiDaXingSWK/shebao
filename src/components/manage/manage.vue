@@ -1,7 +1,7 @@
 <template>
     <div>
-      <v-nav :side-menus='menus'></v-nav>
-    <!--  <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
+     <!-- <v-nav :side-menus='menus'></v-nav>-->
+    <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
 
       <i-menu theme="dark"   :active-name="setActive"  :default-active="onRoutes" @on-select="routeTo">
 
@@ -19,7 +19,7 @@
         </Menu-item>
 
       </i-menu>
-      </div>-->
+      </div>
       <div class="table-wrapper">
         <router-view></router-view>
       <!--  <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">数据恢复</i-button>
