@@ -12,6 +12,7 @@
         <router-view></router-view>
 
       </div>
+
     </div>
 </template>
 <script type="text/ecmascript-6">
@@ -47,5 +48,10 @@
 <style scoped>
     .people-list {
       width: 200px;
+      position: absolute;
+      top: 120px;
+      background: #1c2438;
+      bottom: 0;
+      left: 0px;
     }
 </style>
