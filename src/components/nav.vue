@@ -1,4 +1,5 @@
 <template>
+  <div style="height: 60px">
   <Menu mode="horizontal" theme="dark" active-name="1">
     <Menu-item name="1">
       <Icon type="ios-paper"></Icon><router-link to="/acquisition">
@@ -23,7 +24,7 @@
 
 
   </Menu>
-
+  </div>
 </template>
 <script type="text/ecmascript-6">
 

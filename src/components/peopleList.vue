@@ -8,8 +8,9 @@
         <div class="list">
           <Tree :data="baseData" show-checkbox></Tree>
         </div>
-      <div class="content">111
+      <div class="content">
         <router-view></router-view>
+
       </div>
     </div>
 </template>

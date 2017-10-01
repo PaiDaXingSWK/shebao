@@ -31,5 +31,10 @@
 <style>
 .content {
   padding: 20px ;
+  position: absolute;
+  top: 120px;
+  background: #1c2438;
+  bottom: 0;
+  left: 0px;
 }
 </style>
