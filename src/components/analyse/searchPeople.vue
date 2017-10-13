@@ -13,7 +13,7 @@
             </i-select>
           </i-col>
           <i-col span="4">
-            <i-select    filterable placeholder="居委会" clearable style="width: 100%">
+            <i-select    filterable placeholder="啦啦啦" clearable style="width: 100%">
               <i-option     > </i-option>
             </i-select>
           </i-col>
@@ -27,12 +27,7 @@
               <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
                 <Checkbox label="认证时间"></Checkbox>
                 <Checkbox label="是否去世"></Checkbox>
-                <Checkbox label="去世时间"></Checkbox>
-                <Checkbox label="婚否"></Checkbox>
-                <Checkbox label="身份证号"></Checkbox>
-                <Checkbox label="年龄"></Checkbox>
-                <Checkbox label="性别"></Checkbox>
-                <Checkbox label="电话"></Checkbox>
+
                 <Checkbox label="家庭住址"></Checkbox>
                 <Checkbox label="固定电话"></Checkbox>
               </Checkbox-group>

@@ -13,12 +13,12 @@
           </i-select>
         </i-col>
         <i-col span="8">
-          <i-select    filterable placeholder="居委会" clearable style="width: 100%">
+          <i-select    filterable placeholder="啦啦啦" clearable style="width: 100%">
             <i-option     > </i-option>
           </i-select>
         </i-col>
         <i-col span="4">
-          <i-select    filterable placeholder="认证状态" clearable style="width: 100%">
+          <i-select    filterable placeholder="啦啦啦" clearable style="width: 100%">
             <i-option     > </i-option>
           </i-select>
         </i-col>

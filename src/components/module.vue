@@ -6,23 +6,23 @@
       <div class="module-wrapper">
 
         <div class="module-header">
-          <img src="../images/company-logo.png" alt="" class="module-img"><span class="company-name">西安圣点科技</span>
-          <span class="word">社保参保人员指静脉识别一体化系统</span> <span class="cover"></span></div>
+          >
+          <span class="word">派大星系统</span> <span class="cover"></span></div>
         <ul class="module-list">
           <li class="border-right " @click="packUp">
-            <span class="ico"><Icon type="person" /></span>
+            <span class="ico"><Icon type="plane" /></span>
 
-            信息采集</li>
+            第一个模块</li>
           <li class="  no-left" @click="acquisition">
-            <span class="ico-search"><Icon type="search" /></span>
+            <span class="ico-search"><Icon type="man" /></span>
 
-            人员信息</li>
+            第二个</li>
           <li class="border-right border-top" @click="analyse">
-            <span class="ico-text"><Icon type="document-text" /></span>
-            报表分析</li>
+            <span class="ico-text"><Icon type="woman" /></span>
+            第三个</li>
           <li class="no-left border-top" @click="manage">
             <span class="ico-gear"><Icon type="ios-gear" /></span>
-            核心管理</li>
+            第四个</li>
         </ul>
       </div>
     </div>
@@ -124,7 +124,7 @@
     font-size: 40px;
     line-height: 200px;
     text-align: center;
-    background:url("../images/banner.png") no-repeat;
+    background:rgba(0,0,0,.8);
     background-size:cover ;
     z-index: 99;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-   <p>社保参保人员指静身份识别一体化系统</p>
+   <p>派大星系统</p>
   </div>
 </template>
 <script type="text/ecmascript-6">

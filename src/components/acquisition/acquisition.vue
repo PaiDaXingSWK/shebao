@@ -64,107 +64,11 @@
 
 
 
-      <!--   <div style="margin-left: 70%">
-           <Button>迁移</Button>
-           <Button type="primary">读取身份证</Button>
-           <Button type="ghost">认证</Button>
-           <Button type="error">删除用户</Button>
-         </div>-->
-      <!-- 拍照 -->
-      <!-- <Modal id="takePhote"  width="450"
-        v-model="modalPhoto"
-        title="普通的Modal对话框标题"
-              footer="000"
-        @on-ok="ok"
-        @on-cancel="cancel">
-        <div style="width: 800px"></div>
-       <div class="photo-wrapper">
-        <v-photo @upup="change"></v-photo>
-       </div>
-         <div slot="footer" class="aa">
 
-         </div>
-      </Modal>-->
-      <!--   最新拍照 -->
-      <Modal id="takePhote"  width="450"
-             v-model="modalPhoto"
-             title="普通的Modal对话框标题"
-             footer="000"
-             @on-ok="ok"
-             @on-cancel="cancel">
-        <div style="width: 800px"></div>
-        <div class="photo-wrapper">
-          <div >
-            <div class="booth">
-              <div class="btn">
-                <Button type="success" id="readyw" @click="on">打开摄像头</Button>
-                <Button type="success" id="off">关闭摄像头</Button>
-              </div>
-              <video id="video" width="400" height="300"></video>
-              <Button id='tack' type="primary" @click="go"> 拍照</Button>
-              <Button id='repeat' type="primary" @click="re"> 重新拍照</Button>
-              <canvas id='canvas' width='400' height='300'></canvas>
-              <img id='img' src=''>
-            </div>
 
-          </div>
-        </div>
-        <div slot="footer">
-          <i-button type="success" @click="submitPhoto('user')">确定</i-button>
-          <i-button type="ghost" @click="cancelPhote('user')" style="margin-left: 8px">取消</i-button>
-        </div>
-      </Modal>
-     <!-- <div style="width: 800px;height: 600px;border: 1px solid red;position: absolute;z-index: 9;left: 20%;background: #fff;">
-        <div style="height: 50px"></div>
-        <v-photo></v-photo>
 
-      </div>-->
 
-      <Modal
-        v-model="massageGather"
-        title="信息采集"
-        @on-ok="photoOk"
-        @on-cancel="cancel">
-        <p>对话框内容</p>
-        <p>对话框内容</p>
-        <p>对话框内容</p>
-      </Modal>
-      <Modal
-        v-model="modal1" width='750'
-        title="指静脉采集"
-        @on-ok="ok"
-        @on-cancel="cancel">
-        <div>
-          <Steps :current="1">
-            <Step title="采集准备" content="请选择要采集的手指和用于采集设备"></Step>
-            <Step title="采集中" content="进行三次指静脉采集"></Step>
-            <Step title="采集完成" content="采集完成"></Step>
-          </Steps>
-        </div>
-        <Row :gutter="32">
-          <i-col span="8" push='2'>
-            <label>采集设备</label>
-          </i-col>
-          <i-col span="12">
-            <label>采集手指</label>
-          </i-col>
-        </Row>
-        <Row :gutter="32" justify='center'>
-          <i-col span="8" push='2'>
-            <i-select style='width:134px'>
-              <i-option v-for="item in cityList" :value="item.value" :key="item"> {{ item.label }}</i-option>
-            </i-select>
-          </i-col>
-          <i-col span="12">
-            <Radio-group type="button">
-              <Radio value="l2">左手食指</Radio>
-              <Radio value="l3">左手中指</Radio>
-              <Radio value="r2">右手食指</Radio>
-              <Radio value="r3">右手中指</Radio>
-            </Radio-group>
-          </i-col>
-        </Row>
-      </Modal>
+
 
     </div>
 
@@ -190,10 +94,10 @@
               label: '高新',
               children: [{
                 value: 'xihu',
-                label: '第一个街道办事处',
+                label: 'diyige',
                 children: [{
                   value: 'xihu',
-                  label: '第一个社区居委会'
+                  label: 'diyige'
                 }]
               }]
             }]
@@ -272,46 +176,7 @@
             title: '地址',
             key: 'address'
           },
-          {
-            title: '指静脉操作',
-            key: 'action',
-            width: 150,
-            align: 'center',
-            render: (h, params) => {
-              return h('div', [
-                h('Button', {
-                  props: {
-                    type: 'primary',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.show(params.index)
-                    }
-                  }
-                }, '采集'),
-                h('Button', {
-                  props: {
-                    type: 'error',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.remove(params.index)
-                    }
-                  }
-                }, '删除'),
 
-
-              ]);
-            }
-          },
           {
             title: '人员操作',
             key: 'action',
@@ -347,20 +212,7 @@
                     }
                   }
                 }, '删除'),
-                h('Button', {
-                  props: {
-                    type: 'error',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.remove(params.index)
-                    }
-                  }
-                }, '认证'), h('Button', {
+             h('Button', {
                   props: {
                     type: 'warning',
                     size: 'small'
@@ -374,34 +226,8 @@
                     }
                   }
                 }, '照片采集') ,
-                h('Button', {
-                  props: {
-                    type: 'info',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.remove(params.index)
-                    }
-                  }
-                }, '迁移'),
-                h('Button', {
-                  props: {
-                    type: 'error',
-                    size: 'small'
-                  },
-                  style: {
-                    marginRight: '5px'
-                  },
-                  on: {
-                    click: () => {
-                      this.remove(params.index)
-                    }
-                  }
-                }, '读取身份证')
+
+
               ]);
             }
           }
@@ -432,91 +258,7 @@
         }
         return '';
       },
-      on(){
-          /* 拍照 */
-        let   vendorUrl = window.URL || window.webkitURL;
-        navigator.getMedia = navigator.getUserMedia ||
-          navagator.webkitGetUserMedia ||
-          navigator.mozGetUserMedia ||
-          navigator.msGetUserMedia;
-        navigator.getMedia({
-          video: true, //使用摄像头对象
-          audio: false  //不适用音频
-        }, function(strem){
-          console.log(strem);
-          video.src = vendorUrl.createObjectURL(strem);
-          video.play();
-        }, function(error) {
-          //error.code
-          console.log(error);
-        });
-      },
-      go(){
-        /* 拍照 */
-        let video = document.getElementById('video');
-        let  canvas = document.getElementById('canvas');
-        let  snap = document.getElementById('tack');
-        let  img = document.getElementById('img');
-        //绘制canvas图形
-        canvas.getContext('2d').drawImage(video, 0, 0, 400, 300);
 
-        //把canvas图像转为img图片
-        img.src = canvas.toDataURL("image/png");
-
-      },
-      re(){
-        /* 拍照 */
-        let  canvas = document.getElementById('canvas');
-
-        let  img = document.getElementById('img');
-        canvas.getContext('2d').clearRect(0,0,400,300);
-        img.src = canvas.toDataURL("");
-      },
-      cancelPhote(){
-        let  canvas = document.getElementById('canvas');
-
-        let  img = document.getElementById('img');
-        canvas.getContext('2d').clearRect(0,0,400,300);
-        img.src = canvas.toDataURL("");
-        this.modalPhoto=false;
-      },
-      submitPhoto(){
-        let  canvas = document.getElementById('canvas');
-
-        let  img = document.getElementById('img');
-        canvas.getContext('2d').clearRect(0,0,400,300);
-        img.src = canvas.toDataURL("");
-        this.modalPhoto=false;
-        this.$Notice.open({
-          title: '这是通知标题',
-           desc: '这里是通知描述这里,是通知描述这里是通知描述这里,是通知描述这里,是通知描述这里是通知描述这里是通知描述'
-        });
-      },
-      photoOk(){
-         $('.booth').css('display','none')
-      },
-      massageGathers() {
-        this.massageGather = true
-      },
-      ok () {
-        this.$Message.info('点击了确定');
-      },
-      cancel () {
-        this.$Message.info('点击了取消');
-      },
-      camera () {
-      this.modalPhoto=true;
-            console.log('+++')
-       /* this.$Modal.confirm({
-          title: '确认对话框标题',
-          content: '<div style="width: 800px"></div> <div class="photo-wrapper"> <v-photo></v-photo> </div>',
-          okText: '',
-          cancelText: 'Cancel'
-        });*/
-      },
-      search(){
-          console.log(this.personMsg)
-      }
 
     },
     components: {

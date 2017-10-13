@@ -8,12 +8,12 @@
 
             <i-form ref="formInline" :model="formInline" :rules="ruleInline"  >
               <Form-item prop="user">
-                <i-input type="text" v-model="formInline.user" placeholder="Username" @keyup.enter.native="handleSubmit('formInline')" autofocus>
+                <i-input type="text" v-model="formInline.user" placeholder="Username"    >
                 <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>
               <Form-item prop="password">
-                <i-input type="password"  v-model="formInline.password" @keyup.enter.native="handleSubmit('formInline')" placeholder="Password">
+                <i-input type="password"  v-model="formInline.password"  placeholder="Password">
                 <Icon type="ios-locked-outline" slot="prepend"></Icon>
                 </i-input>
               </Form-item>
@@ -22,15 +22,12 @@
               </Form-item>
             </i-form>
           </Tab-pane>
-        <!--  <Tab-pane label="指静脉登录">
+          <Tab-pane label="第二站登陆">
             <div style="margin-top: 50px">
-            <Button type="primary" @click="login" > 登录 </Button>
-              <br>
-              <span style="color: red">*点击登录按钮 </span>
-              <br>
-              <span style="color: red">开始登录操作 </span>
+
+
             </div>
-          </Tab-pane>-->
+          </Tab-pane>
 
         </Tabs>
         </i-col>

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-   <!-- <v-header v-show="Token"></v-header>
-    <v-nav v-show="Token"></v-nav>-->
+
     <div class="content">
       <router-view></router-view>
     </div>

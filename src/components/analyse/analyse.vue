@@ -6,47 +6,21 @@
 
         <Menu-item name="searchPeople">
           <Icon type="document-text"></Icon>
-          查询人员信息
+          第一个
         </Menu-item>
         <Menu-item name="identify">
           <Icon type="chatbubbles"></Icon>
-          认真/非认证
+          第二个
         </Menu-item>
         <Menu-item name="hisIdentify">
           <Icon type="chatbubbles"></Icon>
-          历史认真记录
+          第三个
         </Menu-item>
       </i-menu>
     </div>
     <div class="table-wrapper">
       <router-view></router-view>
-    <!--  <div class="search-body" style="overflow: visible">
-        <Row :gutter='32'>
-          <i-col span="4">
-            <i-select    filterable placeholder="城市" clearable style="width: 100%">
-              <i-option> </i-option>
-            </i-select>
-          </i-col>
-          <i-col span="4">
-            <i-select    filterable placeholder="地区" clearable style="width: 100%">
-              <i-option     > </i-option>
-            </i-select>
-          </i-col>
-          <i-col span="8">
-            <i-select    filterable placeholder="居委会" clearable style="width: 100%">
-              <i-option     > </i-option>
-            </i-select>
-          </i-col>
-          &lt;!&ndash;<i-col span="4">
-            <date-picker  type="datetime"   placeholder="时间" style="width: 100%"  ></date-picker>
-          </i-col>&ndash;&gt;
 
-          <i-col span="4" >
-            <i-button type="info"  >搜索</i-button>
-          </i-col>
-        </Row>
-      </div>
-      <Table border :columns="columns7" :data="data6"></Table>-->
     </div>
   </div>
 </template>
@@ -77,41 +51,7 @@
           title: '地址',
           key: 'address'
         },
-       /* {
-          title: '操作',
-          key: 'action',
-          width: 150,
-          align: 'center',
-          render: (h, params) => {
-            return h('div', [
-              h('Button', {
-                props: {
-                  type: 'primary',
-                  size: 'small'
-                },
-                style: {
-                  marginRight: '5px'
-                },
-                on: {
-                  click: () => {
-                    this.show(params.index)
-                  }
-                }
-              }, '查看'),
-              h('Button', {
-                props: {
-                  type: 'error',
-                  size: 'small'
-                },
-                on: {
-                  click: () => {
-                    this.remove(params.index)
-                  }
-                }
-              }, '删除')
-            ]);
-          }
-        }*/
+
       ],
         data6: []
       }

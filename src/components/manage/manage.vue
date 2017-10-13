@@ -1,6 +1,6 @@
 <template>
     <div>
-     <!-- <v-nav :side-menus='menus'></v-nav>-->
+      <!--<v-nav :side-menus='menus'></v-nav> -->
     <div class="list-content" style="box-shadow: 2px 10px 18px #333333;" >
 
       <i-menu theme="dark"   :active-name="setActive"  :default-active="onRoutes" @on-select="routeTo">
@@ -11,22 +11,18 @@
         </Menu-item>
         <Menu-item name="setUp">
           <Icon type="chatbubbles"></Icon>
-          管理设置
+          一二设置
         </Menu-item>
         <Menu-item name="core">
           <Icon type="chatbubbles"></Icon>
-          设备
+          啦啦
         </Menu-item>
 
       </i-menu>
       </div>
       <div class="table-wrapper">
         <router-view></router-view>
-      <!--  <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">数据恢复</i-button>
-        <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">数据同步</i-button>
-        <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">系统备份</i-button>
-        <i-button type="info" @click='ExportOrigin'  style="margin-bottom: 10px">参数配置</i-button>
-        <Table border :columns="columns7" :data="data6"></Table>-->
+
       </div>
     </div>
 </template>

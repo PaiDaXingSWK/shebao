@@ -13,7 +13,7 @@
           </i-select>
         </i-col>
         <i-col span="6">
-          <i-select    filterable placeholder="居委会" clearable style="width: 100%">
+          <i-select    filterable placeholder="啦啦" clearable style="width: 100%">
             <i-option     > </i-option>
           </i-select>
         </i-col>
@@ -91,33 +91,13 @@
           "key": "day",
           "width": 150
         },
-        {
-          "title": "最新认证时间",
-          "key": "week",
-          "width": 150
-        },
+
         {
           "title": "手机号码",
           "key": "month",
           "width": 150
         } ,{
           "title": "电话海马",
-          "key": "month",
-          "width": 150
-        } ,{
-          "title": "行政区全名称",
-          "key": "month",
-          "width": 150
-        } ,{
-          "title": "是否有指静脉信息",
-          "key": "month",
-          "width": 150
-        } ,{
-          "title": "认证时间",
-          "key": "month",
-          "width": 150
-        } ,{
-          "title": "证件类型",
           "key": "month",
           "width": 150
         },{
@@ -131,7 +111,7 @@
         }
       ],
         data7: [ {
-          "name": "王兴",
+          "name": "派大星",
           "fav": 0,
           "show": 3651,
           "weak": 1819,
